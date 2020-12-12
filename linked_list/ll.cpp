@@ -2,6 +2,7 @@
 
 /*
  * Singly linked list that stores integers.
+ *
  */
 
 typedef struct node_t {
