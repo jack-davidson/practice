@@ -1,0 +1,29 @@
+import random
+
+-- Configuration:
+
+let welcome_message = "Welcome, please enter a lottery number"
+let lottery_message_win = "Yay! You won the lottery"
+let lottery_message_loss = "Unfortunately, you did not win the lottery, good luck next time"
+
+let lottery_number_max = 999
+let lottery_number_min = 0
+
+let main() =
+    print welcome_message -- Welcome the user
+    let lottery_number_guess = input() -- Get lottery number from user
+
+    -- Random winning number defined in between a range of LOTTERY_NUMBER_MIN
+    -- and LOTTERY_NUMBER_MAX
+    let winning_number =
+	randomint(lottery_number_min, lottery_number_max)
+
+    -- Compare the user's lottery number and the winning lottery number,
+    -- if it is the right number, print the LOTTERY_MESSAGE_WIN. Otherwise,
+    -- print the lottery_message_loss
+    if lottery_number_guess == winning_number
+	print lottery_message_win
+	return 0
+    else
+	print lottery_message_loss
+	return 0
