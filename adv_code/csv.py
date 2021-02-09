@@ -22,7 +22,7 @@ for i in range(0, len(csv_data)):
     if csv_data[i][Headers.CONTINENT] == "Asia":
         asian_continents += 1
 
-    print(csv_data[i][Headers.CONTINENT])
+    print(csv_data[i][Headers.CONTINENT], end="\n\t")
 
 print("\nAsian Continents listed in this database: " + str(asian_continents))
 csv_file.close()
